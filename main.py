@@ -30,7 +30,7 @@ def index():
     if "username" in session:
         return redirect(url_for('dashboard'))
 
-    return render_template("index.html")
+    return render_template('index.html')
 
 #Login
 @app.route("/login", methods=["POST"])
@@ -44,7 +44,7 @@ def login():
         return redirect(url_for('dashboard'))
     
     else:
-        return render_template("index.html")
+        return render_template('index.html')
 
 #Register
 @app.route("/register", methods=["POST"])
